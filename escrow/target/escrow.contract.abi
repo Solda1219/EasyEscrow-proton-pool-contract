@@ -1,0 +1,496 @@
+{
+  "version": "eosio::abi/1.2",
+  "structs": [
+    {
+      "name": "AllowGlobals",
+      "base": "",
+      "fields": [
+        {
+          "name": "isPaused",
+          "type": "bool"
+        },
+        {
+          "name": "isActorStrict",
+          "type": "bool"
+        },
+        {
+          "name": "isTokenStrict",
+          "type": "bool"
+        },
+        {
+          "name": "isTokensEnabled",
+          "type": "bool"
+        },
+        {
+          "name": "isNftsEnabled",
+          "type": "bool"
+        },
+        {
+          "name": "isContractsEnabled",
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "name": "AllowedActor",
+      "base": "",
+      "fields": [
+        {
+          "name": "actor",
+          "type": "name"
+        },
+        {
+          "name": "isAllowed",
+          "type": "bool"
+        },
+        {
+          "name": "isBlocked",
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "name": "AllowedToken",
+      "base": "",
+      "fields": [
+        {
+          "name": "index",
+          "type": "uint64"
+        },
+        {
+          "name": "token",
+          "type": "ExtendedSymbol"
+        },
+        {
+          "name": "isAllowed",
+          "type": "bool"
+        },
+        {
+          "name": "isBlocked",
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "name": "AtomicFormat",
+      "base": "",
+      "fields": [
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "type",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "Balance",
+      "base": "",
+      "fields": [
+        {
+          "name": "account",
+          "type": "name"
+        },
+        {
+          "name": "tokens",
+          "type": "extended_asset[]"
+        },
+        {
+          "name": "nfts",
+          "type": "uint64[]"
+        }
+      ]
+    },
+    {
+      "name": "Escrow",
+      "base": "",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uint64"
+        },
+        {
+          "name": "from",
+          "type": "name"
+        },
+        {
+          "name": "contesters",
+          "type": "name[]"
+        },
+        {
+          "name": "fromTokens",
+          "type": "extended_asset[]"
+        },
+        {
+          "name": "fromNfts",
+          "type": "uint64[]"
+        },
+        {
+          "name": "expiry",
+          "type": "uint32"
+        }
+      ]
+    },
+    {
+      "name": "EscrowGlobal",
+      "base": "",
+      "fields": [
+        {
+          "name": "escrowId",
+          "type": "uint64"
+        }
+      ]
+    },
+    {
+      "name": "ExtendedSymbol",
+      "base": "",
+      "fields": [
+        {
+          "name": "sym",
+          "type": "symbol"
+        },
+        {
+          "name": "contract",
+          "type": "name"
+        }
+      ]
+    },
+    {
+      "name": "Fee",
+      "base": "",
+      "fields": [
+        {
+          "name": "feeId",
+          "type": "uint64"
+        },
+        {
+          "name": "feeVal",
+          "type": "extended_asset"
+        }
+      ]
+    },
+    {
+      "name": "cancelpool",
+      "base": "",
+      "fields": [
+        {
+          "name": "actor",
+          "type": "name"
+        },
+        {
+          "name": "id",
+          "type": "uint64"
+        }
+      ]
+    },
+    {
+      "name": "fillpool",
+      "base": "",
+      "fields": [
+        {
+          "name": "from",
+          "type": "name"
+        },
+        {
+          "name": "id",
+          "type": "uint64"
+        },
+        {
+          "name": "winners",
+          "type": "name[]"
+        }
+      ]
+    },
+    {
+      "name": "logescrow",
+      "base": "",
+      "fields": [
+        {
+          "name": "escrow",
+          "type": "Escrow"
+        },
+        {
+          "name": "status",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "partakepool",
+      "base": "",
+      "fields": [
+        {
+          "name": "actor",
+          "type": "name"
+        },
+        {
+          "name": "id",
+          "type": "uint64"
+        }
+      ]
+    },
+    {
+      "name": "setactor",
+      "base": "",
+      "fields": [
+        {
+          "name": "actor",
+          "type": "name"
+        },
+        {
+          "name": "isAllowed",
+          "type": "bool"
+        },
+        {
+          "name": "isBlocked",
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "name": "setfee",
+      "base": "",
+      "fields": [
+        {
+          "name": "feeId",
+          "type": "uint64"
+        },
+        {
+          "name": "feeVal",
+          "type": "extended_asset"
+        }
+      ]
+    },
+    {
+      "name": "setglobals",
+      "base": "",
+      "fields": [
+        {
+          "name": "isPaused",
+          "type": "bool"
+        },
+        {
+          "name": "isActorStrict",
+          "type": "bool"
+        },
+        {
+          "name": "isTokenStrict",
+          "type": "bool"
+        },
+        {
+          "name": "isTokensEnabled",
+          "type": "bool"
+        },
+        {
+          "name": "isNftsEnabled",
+          "type": "bool"
+        },
+        {
+          "name": "isContractsEnabled",
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "name": "settoken",
+      "base": "",
+      "fields": [
+        {
+          "name": "token",
+          "type": "ExtendedSymbol"
+        },
+        {
+          "name": "isAllowed",
+          "type": "bool"
+        },
+        {
+          "name": "isBlocked",
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "name": "startpool",
+      "base": "",
+      "fields": [
+        {
+          "name": "from",
+          "type": "name"
+        },
+        {
+          "name": "contesters",
+          "type": "name[]"
+        },
+        {
+          "name": "fromTokens",
+          "type": "extended_asset[]"
+        },
+        {
+          "name": "fromNfts",
+          "type": "uint64[]"
+        },
+        {
+          "name": "expiry",
+          "type": "uint32"
+        }
+      ]
+    },
+    {
+      "name": "withdraw",
+      "base": "",
+      "fields": [
+        {
+          "name": "actor",
+          "type": "name"
+        },
+        {
+          "name": "tokens",
+          "type": "extended_asset[]"
+        },
+        {
+          "name": "nfts",
+          "type": "uint64[]"
+        }
+      ]
+    }
+  ],
+  "types": [],
+  "actions": [
+    {
+      "name": "cancelpool",
+      "type": "cancelpool",
+      "ricardian_contract": ""
+    },
+    {
+      "name": "fillpool",
+      "type": "fillpool",
+      "ricardian_contract": ""
+    },
+    {
+      "name": "logescrow",
+      "type": "logescrow",
+      "ricardian_contract": ""
+    },
+    {
+      "name": "partakepool",
+      "type": "partakepool",
+      "ricardian_contract": ""
+    },
+    {
+      "name": "setactor",
+      "type": "setactor",
+      "ricardian_contract": ""
+    },
+    {
+      "name": "setfee",
+      "type": "setfee",
+      "ricardian_contract": ""
+    },
+    {
+      "name": "setglobals",
+      "type": "setglobals",
+      "ricardian_contract": ""
+    },
+    {
+      "name": "settoken",
+      "type": "settoken",
+      "ricardian_contract": ""
+    },
+    {
+      "name": "startpool",
+      "type": "startpool",
+      "ricardian_contract": ""
+    },
+    {
+      "name": "withdraw",
+      "type": "withdraw",
+      "ricardian_contract": ""
+    }
+  ],
+  "tables": [
+    {
+      "name": "allowedactor",
+      "type": "AllowedActor",
+      "index_type": "i64",
+      "key_names": [],
+      "key_types": []
+    },
+    {
+      "name": "allowedtoken",
+      "type": "AllowedToken",
+      "index_type": "i64",
+      "key_names": [],
+      "key_types": []
+    },
+    {
+      "name": "allowglobals",
+      "type": "AllowGlobals",
+      "index_type": "i64",
+      "key_names": [],
+      "key_types": []
+    },
+    {
+      "name": "balances",
+      "type": "Balance",
+      "index_type": "i64",
+      "key_names": [],
+      "key_types": []
+    },
+    {
+      "name": "escrowglobal",
+      "type": "EscrowGlobal",
+      "index_type": "i64",
+      "key_names": [],
+      "key_types": []
+    },
+    {
+      "name": "escrows",
+      "type": "Escrow",
+      "index_type": "i64",
+      "key_names": [],
+      "key_types": []
+    },
+    {
+      "name": "fees",
+      "type": "Fee",
+      "index_type": "i64",
+      "key_names": [],
+      "key_types": []
+    }
+  ],
+  "ricardian_clauses": [],
+  "variants": [
+    {
+      "name": "AtomicValue",
+      "types": [
+        "int8",
+        "int16",
+        "int32",
+        "int64",
+        "uint8",
+        "uint16",
+        "uint32",
+        "uint64",
+        "float32",
+        "float64",
+        "string",
+        "int8[]",
+        "int16[]",
+        "int32[]",
+        "int64[]",
+        "bytes",
+        "uint16[]",
+        "uint32[]",
+        "uint64[]",
+        "float32[]",
+        "float64[]",
+        "string[]"
+      ]
+    }
+  ],
+  "action_results": [],
+  "abi_extensions": [],
+  "error_messages": []
+}
